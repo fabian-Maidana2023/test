@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>T E S T</title>
+<script>
+function resultado() {
+var p1, p2, p3, p4, nota;
+ 
+<!-- 1ª pregunta -->
+if (document.getElementById('p1').checked==true) {p1=1}
+else {p1=0}
+<!-- 2ª pregunta -->
+if (document.getElementById('p3').checked==true) {p2=1}
+else {p2=0}
+<!-- 3ª pregunta -->
+if (document.getElementById('p5').checked==true) {p3=1}
+else {p3=0}
+<!-- 4ª pregunta -->
+if (document.getElementById('p7').checked==true) {p4=1}
+else {p4=0}
+ 
+nota=p1+p2+p3+p4;
+alert(" Aciertos: " + nota);
+
+}
+function promedio(){
+if(nota >= 4){
+		alert(" APROBADO");
+	}else{
+		alert(" DESAPROBADO");
+	}
+    location.reload();
+}
+    
+</script>
+</head>
+<body>
+<center><h2>Te estas resguardando </h2> </center>
+<hr>
+<form style="font:normal 16px sans-serif">
+<p>¿hoy hablaste de consumo en algun momento del dia?  </p>
+<p onclick><input type="radio" name="pregunta1" id="p1"> si.</p>
+<p onclick><input type="radio" name="pregunta1" id="p2"> no.</p>
+
+ 
+<p>¿visitaste algun lugar de consumo? </p>
+<p onclick><input type="radio" name="pregunta2" id="p3"> si.</p>
+<p onclick><input type="radio" name="pregunta2" id="p4"> no.</p>
+ 
+<p>¿estas manejando dinero? </p>
+<p onclick><input type="radio" name="pregunta3" id="p5"> si.</p>
+<p onclick><input type="radio" name="pregunta3" id="p6"> no.</p>
+
+
+ 
+<p>¿hoy miraste alguna  series o peliscula que tenga contenido o situaciones de consumo?</p>
+<p onclick><input type="radio" name="pregunta4" id="p7"> si.</p>
+<p onclick><input type="radio" name="pregunta4" id="p8"> no.</p>
+
+<hr>
+<p><input type="button" value=" R E S U L T A D O " onclick="promedio()"/></p>
+</form>
+</body>
+</html>
